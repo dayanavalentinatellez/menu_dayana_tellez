@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Principal</title>
+</head>
+<body>
+    <script src="ejercicios.js"></script>
+    <script>
+        var menu = "MENU\n";
+
+        menu += "1. Operadores\n";
+        menu += "2. Condicionales\n";
+        menu += "3. Ciclos\n";
+        menu += "4. Salir\n";
+        menu += "Ingrese una opción:\n\n";
+
+        var cod = 0;
+
+        do {
+            cod = parseInt(prompt(menu));
+
+            switch (cod) {
+                case 1:
+                    var operadoresMenu = "Operadores MENU\n";
+                    operadoresMenu += "1. Calcular área de un triángulo\n";
+                    operadoresMenu += "2. Suma de dos números\n";
+                    operadoresMenu += "3. Número elevado al cuadrado\n";
+                    operadoresMenu += "4. Conversión de euros a dólares\n";
+                    operadoresMenu += "5. Ingrese el lado de un cuadrado y muestre el valor del área y del perímetro\n";
+                    operadoresMenu += "6. Calcular el área y el volumen de un cilindro\n";
+                    operadoresMenu += "7. Calcular la longitud y el área de una circunferencia\n";
+                    operadoresMenu += "8. Calcular el promedio de tres números\n";
+                    operadoresMenu += "9. Salir\n";
+                    operadoresMenu += "Ingrese una opción:\n\n";
+
+                    var opcionOperadores;
+                    do {
+                        opcionOperadores = parseInt(prompt(operadoresMenu));
+
+                        switch (opcionOperadores) {
+                            case 1:
+                                alert( area());
+                                break;
+                            case 2:
+                                alert( suma());
+                                break;
+                            case 3:
+                                alert( cuadrado());
+                                break;
+                            case 4:
+                                alert(conversion());
+                                break;   
+                            case 5:
+                                alert(lado());
+                                break;
+                            case 6:
+                                alert(cilindro());
+                                break; 
+                            case 7:
+                               alert(radio());
+                                break;
+                            case 8:   
+                                alert(promedio());
+                                break;  
+                            case 9:
+                                alert("Saliendo del menú de operadores");
+                                break; 
+                            default:
+                                alert("La opción no existe!");
+                        }
+                    } while (opcionOperadores != 9);
+                    break;
+
+                case 2:
+                    var condicionalesMenu = "Condicionales MENU\n";
+                    condicionalesMenu += "1. Verificar si un número es positivo, negativo o cero\n";
+                    condicionalesMenu += "2. Determinar el mayor y el menor entre dos números\n";
+                    condicionalesMenu += "3. Encontrar el mayor y el menor entre tres números positivos\n";
+                    condicionalesMenu += "4. Sumar o restar dos números según la relación entre ellos\n";
+                    condicionalesMenu += "5. Calcular el cociente entre dos números evitando la división por cero\n";
+                    condicionalesMenu += "6. Sumar si al menos uno de los números es negativo, en caso contrario multiplicar\n";
+                    condicionalesMenu += "7. Determinar si un año es bisiesto\n";
+                    condicionalesMenu += "8. Salir\n";
+                    condicionalesMenu += "Ingrese una opción:\n\n";
+
+                    var opcionCondicionales;
+
+                    do {
+                        opcionCondicionales = parseInt(prompt(condicionalesMenu));
+
+                        switch (opcionCondicionales) {
+                            case 1:
+                    alert( positivo());
+                    break;
+                case 2:
+                    alert(mayor());
+                    break;
+                case 3:
+                
+                    alert(cilindro());
+                    break; 
+                case 4:
+                    alert(sumar());
+                    break;   
+                case 5:
+                    alert(cociente());
+                    break;
+                case 6:
+                    alert( multiplicar());
+                    break; 
+                case 7:
+                    alert( bisiesto());
+                    break;
+                case 8:   
+                    alert("Saliendo del menú de operadores");
+                    break;  
+                default:
+                    alert("La opción no existe!");
+            }
+                    } while (opcionCondicionales != 2);
+                    break;
+
+                case 3:
+                    var ciclosMenu = "Ciclos MENU\n";
+                    ciclosMenu += "1. Imprimir todos los múltiplos de 3 que hay entre 1 y 100\n";
+                    ciclosMenu += "2.Imprimir los números impares entre 0 y 100\n";
+                    ciclosMenu += "3.Imprimir los números pares del 1 al 100\n";
+                    ciclosMenu += "4.Escribir un programa que imprima por pantalla los cuadrados de los números del 1 al 30";
+                    ciclosMenu += "5.Escribir un programa que sume los cuadrados de los cien primeros números naturales,mostrando el resultado en pantalla\n";
+                    ciclosMenu += "6.Dados dos números naturales, el primero menor que el segundo, generar y mostrar todos losnúmeros comprendidos entre ellos en secuencia ascendente.\n";
+                    ciclosMenu += "7. Sumar todos los números que se digitan por teclado mientras no sea cero.\n";
+                    ciclosMenu += "8. Salir\n";
+                    ciclosMenu += "Ingrese una opción:\n\n";
+
+                    var opcionCiclos;
+
+                    do {
+                        opcionCiclos = parseInt(prompt(ciclosMenu));
+
+                        switch (opcionCiclos) {
+                            case 1:
+                                alert(multiplostres());
+                                break;
+                            case 2:
+                                alert(impares());
+                                break;
+                            case 3:
+                                alert(pares());
+                                break; 
+                             case 4:
+                                alert(cuadradost());
+                                break;   
+                             case 5:
+                                alert(sumacuadrado());
+                                break; 
+                             case 6:
+                                alert(secuencias());
+                                break;
+                            case 7:
+                                alert(sumarn());
+                                break;  
+                            case 8:
+                                alert("Saliendo del menú de ciclos...");
+                                break;
+                            default:
+                                alert("La opción no existe!");
+                        }
+                    } while (opcionCiclos != 3);
+                    break;
+
+                case 4:
+                    alert("Saliendo...");
+                    break;
+
+                default:
+                    alert("La opción no existe!");
+            }
+        } while (cod != 4);
+    </script>   
+</body>
+</html>
